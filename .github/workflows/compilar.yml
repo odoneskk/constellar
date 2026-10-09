@@ -10,6 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Extrair o projeto do zip
+        run: unzip -q constellar-fase3.zip -d projeto
+
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -20,11 +23,11 @@ jobs:
           gradle-version: 8.11.1
 
       - name: Compilar o mod
-        working-directory: constellar
+        working-directory: projeto/constellar
         run: gradle build --no-daemon
 
       - name: Guardar o .jar
         uses: actions/upload-artifact@v4
         with:
           name: constellar-mod
-          path: constellar/build/libs/*.jar
+          path: projeto/constellar/build/libs/*.jar
