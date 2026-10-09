@@ -1,7 +1,0 @@
-{
-  "name": "Lira",
-  "color": 16755200,
-  "preferred_moon_phase": 4,
-  "fd_bonus": 1.5,
-  "stars": [ {"x":8,"y":2}, {"x":5,"y":7}, {"x":11,"y":7}, {"x":5,"y":13}, {"x":11,"y":13} ]
-}
