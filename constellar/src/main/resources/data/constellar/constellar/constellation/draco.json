@@ -1,0 +1,7 @@
+{
+  "name": "Dragão",
+  "color": 16733525,
+  "preferred_moon_phase": 2,
+  "fd_bonus": 1.75,
+  "stars": [ {"x":2,"y":3}, {"x":6,"y":5}, {"x":9,"y":9}, {"x":13,"y":8}, {"x":14,"y":13} ]
+}
