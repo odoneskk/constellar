@@ -10,8 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Extrair o projeto do zip
-        run: unzip -q constellar-fase3.zip -d projeto
+      - name: Extrair o projeto do zip mais recente
+        run: |
+          ZIP=$(ls constellar-*.zip | sort -V | tail -n1)
+          echo "Usando $ZIP"
+          unzip -q "$ZIP" -d projeto
 
       - uses: actions/setup-java@v4
         with:
